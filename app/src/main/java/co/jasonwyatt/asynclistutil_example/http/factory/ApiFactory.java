@@ -20,7 +20,7 @@ public class ApiFactory {
                 .connectTimeout(10, TimeUnit.SECONDS)//设置连接超时时间
                 .readTimeout(10, TimeUnit.SECONDS)//设置读取超时时间
                 .writeTimeout(10, TimeUnit.SECONDS)//设置写入超时时间
-                .addInterceptor(HeaderInterceptor())//添加其他拦截器
+                .addNetworkInterceptor(HeaderInterceptor())//添加其他拦截器
                 .addInterceptor(LogInterceptor())//添加日志拦截器
                 .build();
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
@@ -49,6 +49,9 @@ public class ApiFactory {
                 Request mRequest = chain.request();
                 //在这里你可以做一些想做的事,比如token失效时,重新获取token
                 //或者添加header等等,PS我会在下一篇文章总写拦截token方法
+                Log.e("Request",mRequest.toString());
+                Response response = chain.proceed(mRequest);
+                Log.e("Response",response.toString());
                 return chain.proceed(mRequest);
             }
         };

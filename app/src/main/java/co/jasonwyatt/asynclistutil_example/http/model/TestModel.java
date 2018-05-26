@@ -11,11 +11,11 @@ import io.reactivex.Observable;
 
 public class TestModel {
     public Observable<GankHttpResponse<List<GankItemBean>>> fetchGirlList(int num, int page) {
-        return RetrofitManager.getSingleton().Apiservice().getGirlList(num, page);
+        return RetrofitManager.getTestService().getGirlList(num, page);
     }
 
     public void fetchGirlList(int num, int page, Observer<List<GankItemBean>> observer) {
-        RetrofitManager.getSingleton().Apiservice().getGirlList(num, page)
+        RetrofitManager.getTestService().getGirlList(num, page)
                 .compose(HttpUtils.<GankHttpResponse<List<GankItemBean>>>rxSchedulerHelper())
                 .compose(HttpUtils.<List<GankItemBean>>handleGankResult())
                 .subscribe(observer);
