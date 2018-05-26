@@ -2,8 +2,8 @@ package co.jasonwyatt.asynclistutil_example.http.model;
 
 import java.util.List;
 
-import co.jasonwyatt.asynclistutil_example.http.ResponseEntity.GankHttpResponse;
-import co.jasonwyatt.asynclistutil_example.http.ResponseEntity.GankItemBean;
+import co.jasonwyatt.asynclistutil_example.http.baseresult.GankHttpResponse;
+import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean;
 import co.jasonwyatt.asynclistutil_example.http.manager.RetrofitManager;
 import co.jasonwyatt.asynclistutil_example.http.oberver.Observer;
 import co.jasonwyatt.asynclistutil_example.http.util.HttpUtils;

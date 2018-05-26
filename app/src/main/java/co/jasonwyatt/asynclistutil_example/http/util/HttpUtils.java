@@ -1,6 +1,6 @@
 package co.jasonwyatt.asynclistutil_example.http.util;
 
-import co.jasonwyatt.asynclistutil_example.http.ResponseEntity.GankHttpResponse;
+import co.jasonwyatt.asynclistutil_example.http.baseresult.GankHttpResponse;
 import io.reactivex.Observable;
 import io.reactivex.ObservableEmitter;
 import io.reactivex.ObservableOnSubscribe;

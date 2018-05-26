@@ -1,4 +1,4 @@
-package co.jasonwyatt.asynclistutil_example.http.ResponseEntity;
+package co.jasonwyatt.asynclistutil_example.http.responseentity;
 
 public class GankItemBean {
 

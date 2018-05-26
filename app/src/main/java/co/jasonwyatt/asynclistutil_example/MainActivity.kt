@@ -5,14 +5,11 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-import co.jasonwyatt.asynclistutil_example.http.ResponseEntity.GankItemBean
+import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean
 import co.jasonwyatt.asynclistutil_example.http.error.ExceptionHandle
 import co.jasonwyatt.asynclistutil_example.http.model.TestModel
-import co.jasonwyatt.asynclistutil_example.http.oberver.Observer
 import co.jasonwyatt.asynclistutil_example.http.util.HttpUtils
 import io.reactivex.disposables.Disposable
-import io.reactivex.functions.Action
-import java.util.function.Consumer
 
 class MainActivity : AppCompatActivity() {
     private lateinit var recyclerView: RecyclerView
