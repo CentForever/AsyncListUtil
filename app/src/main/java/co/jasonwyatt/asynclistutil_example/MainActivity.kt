@@ -1,13 +1,13 @@
 package co.jasonwyatt.asynclistutil_example
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.util.Log
-import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean
 import co.jasonwyatt.asynclistutil_example.http.error.ExceptionHandle
 import co.jasonwyatt.asynclistutil_example.http.model.TestModel
+import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean
 import co.jasonwyatt.asynclistutil_example.http.util.HttpUtils
 import io.reactivex.disposables.Disposable
 
@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
 
         gsModel = TestModel()
 
-        gsModel!!.fetchGirlList(20, 1)
+        gsModel!!.fetchGirlList(1, 1)
                 .compose(HttpUtils.rxSchedulerHelper())
                 .compose(HttpUtils.handleGankResult())
                 .subscribe(io.reactivex.functions.Consumer {
@@ -40,9 +40,9 @@ class MainActivity : AppCompatActivity() {
                 }, io.reactivex.functions.Consumer {
                     Log.e("mgg", it.message)
                 })
-        TestModel().fetchGirlList(20, 2, object : co.jasonwyatt.asynclistutil_example.http.oberver.Observer<List<GankItemBean>>() {
+        TestModel().fetchGirlList(1, 2, object : co.jasonwyatt.asynclistutil_example.http.oberver.Observer<List<GankItemBean>>() {
             override fun OnSuccess(gankItemBeans: List<GankItemBean>) {
-                Log.e("mgg", gankItemBeans.toString())
+                Log.e("mengganggang", gankItemBeans.toString())
             }
 
             override fun OnFail(e: ExceptionHandle.ResponeThrowable) {
