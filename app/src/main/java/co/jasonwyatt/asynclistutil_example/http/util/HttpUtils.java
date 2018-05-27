@@ -67,7 +67,7 @@ public class HttpUtils {
                 return httpResponseObservable.flatMap(new Function<GankHttpResponse<T>, Observable<T>>() {
                     @Override
                     public Observable<T> apply(GankHttpResponse<T> tGankHttpResponse) {
-                        if (!tGankHttpResponse.getError()) {
+                        if (!tGankHttpResponse.isError()) {
                             return createData(tGankHttpResponse.getResults());
                         } else {
                             return Observable.error(new Exception("服务器返回error"));

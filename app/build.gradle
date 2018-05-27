@@ -2,16 +2,16 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 apply plugin: 'kotlin-kapt'
 project.ext {
-    arch = "1.0.0"
+    arch = "1.1.1"
     retrofit = "2.0.2"
 }
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
     defaultConfig {
         applicationId "co.jasonwyatt.asynclistutil_example"
         minSdkVersion 19
-        targetSdkVersion 26
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
@@ -39,13 +39,14 @@ dependencies {
     compile "com.android.support:recyclerview-v7:$support_lib_version"
     compile "com.android.support.constraint:constraint-layout:1.0.2"
     testCompile 'junit:junit:4.12'
-    compile "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile "android.arch.lifecycle:runtime:$project.arch"
-    compile "android.arch.lifecycle:extensions:$project.arch"
-    kapt "android.arch.lifecycle:compiler:$project.arch"
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    //compile "android.arch.lifecycle:runtime:$project.arch"
+    //compile "android.arch.lifecycle:extensions:$project.arch"
+    //compile "android.arch.lifecycle:common-java8:$project.arch"
+    //kapt "android.arch.lifecycle:compiler:$project.arch"
 
-    compile 'com.squareup.okhttp3:okhttp:3.1.2'
-    compile 'com.squareup.okhttp3:logging-interceptor:3.1.2'
+    compile 'com.squareup.okhttp3:okhttp:3.7.0'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.7.0'
 
     compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
     compile "io.reactivex.rxjava2:rxjava:2.0.8"
@@ -53,10 +54,7 @@ dependencies {
     compile "com.squareup.retrofit2:retrofit:$project.retrofit"
     compile "com.squareup.retrofit2:adapter-rxjava2:2.2.0"
     compile "com.squareup.retrofit2:converter-gson:2.2.0"
-    compile "com.google.code.gson:gson:2.6.2"
+    compile "com.google.code.gson:gson:2.8.0"
     compile 'com.squareup.retrofit2:converter-simplexml:2.1.0'
     compile 'com.squareup.okio:okio:1.7.0'
-}
-repositories {
-    mavenCentral()
 }

@@ -20,8 +20,8 @@ public class ApiFactory {
                 .connectTimeout(10, TimeUnit.SECONDS)//设置连接超时时间
                 .readTimeout(10, TimeUnit.SECONDS)//设置读取超时时间
                 .writeTimeout(10, TimeUnit.SECONDS)//设置写入超时时间
-                .addNetworkInterceptor(HeaderInterceptor())//添加其他拦截器
-                .addInterceptor(LogInterceptor())//添加日志拦截器
+                //.addNetworkInterceptor(HeaderInterceptor())//添加其他拦截器
+                //.addInterceptor(LogInterceptor())//添加日志拦截器
                 .build();
         Retrofit retrofit = new Retrofit.Builder().baseUrl(baseUrl)
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

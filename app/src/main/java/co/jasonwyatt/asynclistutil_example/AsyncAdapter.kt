@@ -22,8 +22,15 @@ class AsyncAdapter(itemSource: ItemSource, recyclerView: RecyclerView) : Recycle
         dataCallback.close()
     }
 
-    override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
+   /* override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.bindView(listUtil.getItem(position), position)
+    }*/
+
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        holder!!.bindView(
+                listUtil.getItem(position),
+                position
+        )
     }
 
     override fun getItemCount(): Int = listUtil.itemCount
