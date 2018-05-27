@@ -7,7 +7,7 @@ import android.support.v7.widget.RecyclerView
 import android.util.Log
 import co.jasonwyatt.asynclistutil_example.http.error.ExceptionHandle
 import co.jasonwyatt.asynclistutil_example.http.model.TestModel
-import co.jasonwyatt.asynclistutil_example.http.responseentity1.GankItemBean
+import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean
 import co.jasonwyatt.asynclistutil_example.http.util.HttpUtils
 import io.reactivex.disposables.Disposable
 
