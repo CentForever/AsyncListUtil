@@ -3,7 +3,7 @@ package co.jasonwyatt.asynclistutil_example.http.api;
 import java.util.List;
 
 import co.jasonwyatt.asynclistutil_example.http.baseresult.GankHttpResponse;
-import co.jasonwyatt.asynclistutil_example.http.responseentity.GankItemBean;
+import co.jasonwyatt.asynclistutil_example.http.responseentity1.GankItemBean;
 import io.reactivex.Observable;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
